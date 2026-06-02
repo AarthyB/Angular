@@ -1,0 +1,88 @@
+.kanban_view {
+  min-height: 100vh;
+}
+
+.kanban_controls {
+  width: 100%;
+  background-color: #eef2fb;
+  padding: 8px 0;
+  border-bottom: 1px solid #dce0e8;
+}
+
+.add_card,
+.edit_card {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+}
+
+input {
+  padding: 7px 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.15s;
+}
+input:focus {
+  border-color: #4c9aff;
+}
+
+.add_card_input {
+  width: 220px;
+}
+
+.selected_card_input {
+  width: 220px;
+  background: #f0f0f0;
+  color: #555;
+}
+
+button {
+  padding: 7px 14px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: background-color 0.15s, opacity 0.15s;
+}
+button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.add_card_btn {
+  background-color: #0052cc;
+  color: #fff;
+}
+.add_card_btn:hover:not(:disabled) {
+  background-color: #0747a6;
+}
+
+.card_move_back_btn,
+.card_forward_btn {
+  background-color: #5e6c84;
+  color: #fff;
+}
+.card_move_back_btn:hover:not(:disabled),
+.card_forward_btn:hover:not(:disabled) {
+  background-color: #42526e;
+}
+
+.card_delete_btn {
+  background-color: #de350b;
+  color: #fff;
+}
+.card_delete_btn:hover:not(:disabled) {
+  background-color: #bf2600;
+}
+
+.kanban_stage_container {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  padding: 16px;
+  gap: 4px;
+}
